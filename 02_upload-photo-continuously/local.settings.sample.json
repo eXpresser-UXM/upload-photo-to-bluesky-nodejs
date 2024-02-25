@@ -1,0 +1,15 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsSecretStorageType": "files",
+    "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+    "MyWebsite:Host": "<自分のWebサイト 例: https://example.com>",
+    "MyWebsite:Image": "<取得したい画像のパス 例: /photos/001.jpg>",
+    "MyWebsite:Title": "<写真のタイトル>",
+    "Bluesky:Service": "https://bsky.social",
+    "Bluesky:Identifier": "<Bluesky ID 例: myaccount.bsky.social>",
+    "Bluesky:AppPassword": "<Bluesky アプリパスワード>"
+  }
+}
