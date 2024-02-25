@@ -3,6 +3,7 @@ import postPhotoToBlueskyMain from "../lib/post-photo-to-bluesky";
 
 export async function postPhotoDaily(myTimer: Timer, context: InvocationContext): Promise<void> {
   try {
+    // 環境変数から設定情報を取得します。
     const myWebsiteHost = process.env["MyWebsite:Host"];
     const imagePath = process.env["MyWebsite:Image"];
     const photoTitle = process.env["MyWebsite:Title"];
@@ -14,6 +15,7 @@ export async function postPhotoDaily(myTimer: Timer, context: InvocationContext)
       throw new Error('Not enough environment variables. "MyWebsite:Host", "MyWebsite:Image", "MyWebsite:Title", "Bluesky:Service", "Bluesky:Identifier", "Bluesky:AppPassword" are required.');
     }
 
+    // 前回のロジックを実行します。
     await postPhotoToBlueskyMain(myWebsiteHost, imagePath, photoTitle, bskyService, bskyIdentifier, bskyAppPassword);
 
   } catch (e) {
